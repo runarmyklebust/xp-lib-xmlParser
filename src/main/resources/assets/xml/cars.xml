@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<cars>
+  <car>
+    <color>Arctic Grey</color>
+    <brand>Skoda</brand>
+  </car>
+  <car>
+    <color>Blue</color>
+    <brand>Ford</brand>
+  </car>
+</cars>
