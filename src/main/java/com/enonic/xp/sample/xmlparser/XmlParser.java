@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.json.JSONObject;
 import org.json.XML;
 
@@ -14,13 +12,10 @@ import com.google.common.io.ByteStreams;
 
 public class XmlParser
 {
+    @SuppressWarnings("unused")
     public Object parse( final ByteSource byteSource )
         throws Exception
     {
-        final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware( true );
-        factory.setValidating( false );
-
         final JSONObject jsonObject = XML.toJSONObject( getAsString( byteSource ) );
 
         return new XmlMapper( jsonObject );
